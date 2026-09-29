@@ -63,7 +63,7 @@ footer {
 body {
 	margin-left: auto;
 	margin-right: auto;
-	background: linear-gradient(#666765, #464745);
+	background-color:#666765;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
