@@ -1,24 +1,33 @@
 @charset "UTF-8";
 /* CSS Document */ /* Credits to Adobe for partial of CSS code*/ 
+@font-face {
+    font-family: 'BritannicHost';
+    src: url('../Assets/BRITANIC.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'BritannicBackup';
+    src: url('../Assets/BRITANIC.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 html, 
 html * {
-	padding: 0;
-	margin: 0;
 	box-sizing: border-box;
-	font-family: 'Trebuchet MS';
-	color: #6789A3;
+	font-family: 'BritannicHost','BritannicBackup';
 }
 iframe {
 	border-radius: 30px;
 }
 .style-nav {
-   padding-top: 10px;
+   padding-top: 0;
    padding-bottom: 10px;
    width: 100%;
    margin: 0;
-   overflow: hidden;
-   background-color: white;
+   overflow: visible;
+   background-color: #514178;
    position: fixed;
    top: 0;
    width: 100%;
@@ -42,13 +51,14 @@ img {
       }
 
 footer {
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-	padding: 20px 20px;
-	background-color:black;
-	opacity: .80;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	margin: 0;
+	width: 100%;
+	padding: 5px 20px;
+	background-color: rgba(0, 0, 0, 0.5);
+
 }
 body {
 	margin-left: auto;
@@ -56,11 +66,26 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
-	background-color: #27105A;
+	background: linear-gradient(#666765, #464745);
     }
 
+.brand{
+	border: none;
+	padding: 8px 8px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 24px;
+	margin: 4px 2px;
+	cursor: pointer;
+	transition-duration: 0.4s;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 1.2%;
+}
+
 .nav-button{
-  background-color: purple;
+  background-color:#5B4A87;
   border: none;
   padding: 8px 8px;
   text-align: center;
@@ -74,14 +99,14 @@ body {
   margin-right: auto;
 }
 .nav-button:hover {
-  background-color: #4CAF50; /* Green */
-  color: white;
+  background-color: #6F5AA5;
+  color: black;
 }
 
 .hover-underline-animation {
   display: inline-block;
   position: relative;
-  color: white;
+  color: black;
 }
 
 .hover-underline-animation:after {
@@ -92,7 +117,7 @@ body {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: white;
+  background-color: grey;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -102,11 +127,10 @@ body {
   transform-origin: bottom left;
 }
 .style-logo {
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-	width: 250px;
-	font-family: Garamond;
+	margin-left: 2%; 
+	padding-top: 1%;
+	width: 2.5%;
+	float: left;
 }
 
 .style-nav ul {
@@ -114,7 +138,7 @@ body {
 	font: Garamond;
 }
 
-.animate-opacity{animation:opac 0.8s}@keyframes opac{from{opacity:0} to{opacity:1}}
+.animate-opacity{animation:opac 1.5s}@keyframes opac{from{opacity:0} to{opacity:1}}
 
 .style-nav ul li a {	
 	text-decoration: none;
@@ -125,14 +149,16 @@ body {
 	padding: 8px;
 }
 .dropbtn {
-  background-color: #4CAF50;
+  background-color:  #6F5AA5;;
   color: white;
   border: none;
   cursor: pointer;
 }
 
 .dropdown {
-  position: relative;
+    position: relative;
+    display: inline-block;
+    float: right;
 }
 li a:hover, .dropdown:hover .dropbtn {
   background-color: red;
@@ -143,27 +169,32 @@ li.dropdown {
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #f9f9f9;
+    width: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1001;
+	animation:opac 1s
 }
 
 .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin: 0;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 200px;
+  /* min-width: 200px; */
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
@@ -175,11 +206,11 @@ li.dropdown {
 }
 
 .dropdown-content a:hover {
-  background-color: #f1f1f1;
+  background-color:  #6F5AA5;;
 }
 
 .dropdown:hover .dropdown-content {
-  display: block;
+    display: block;
 }
 
 .dropdown:hover .dropbtn {
@@ -250,9 +281,9 @@ p {
 
 .footer-text {
 	font-size: 13px;
-	margin-bottom: 10px;
-	color: #555546;
-	opacity: .80;
+	margin-bottom: 2%;
+	color: white;
+	font-family: 'Trebuchet MS';
 }
 
 .col {
@@ -344,18 +375,18 @@ p {
 }
 
 /* Fade animation */
-.fade {
+.fade:hover:after {
     animation-name: fade;
     animation-duration: 1s;
 }
 
 @keyframes fade {
     from {
-        opacity: 0.4;
+        opacity: 1;
     }
 
     to {
-        opacity: 1;
+        opacity: 0.4;
     }
 }
 
