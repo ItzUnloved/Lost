@@ -63,10 +63,10 @@ footer {
 body {
 	margin-left: auto;
 	margin-right: auto;
+	background: linear-gradient(#666765, #464745);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 100% 100%;
-	background: linear-gradient(#666765, #464745);
+    background-size: cover;
     }
 
 .brand{
