@@ -1,49 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Contact</title>
-
-    <link rel="stylesheet" href="CSS/styles.css">
-
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href="CSS/styles.css">
+    <link rel="icon" type="image/x-icon" href="Assets/Logo.png">
+    
 </head>
+<body class="animate-opacity" >
+	<div class="style-nav">
+        <img src="Assets/Logo.png" class="style-logo"><a class="brand" style="float: left; font-weight: bolder;"><div class="hover-underline-animation">Lost IGN</div></a>
+		<ul>
+			<li><a href="https://www.twitch.tv/itzzunloved" target="_blank" class="nav-button" style="float: right"><div class="hover-underline-animation">Twitch</div></a></li>
+				<div class="dropdown">
+                    <div class="dropbtn">
+                        <li><a href="javascript:void(0)" class="nav-button" style="float: right"><div class="hover-underline-animation" >Instagrams!</div></a>
+                    </div>
+                    <div class="dropdown-content">
+					    <a href="#" class="nav-button" style="float: right;"><div class="hover-underline-animation">Photos</div></a>
+					    <a href="#" class="nav-button" style="float: right;"><div class="hover-underline-animation">ItzUnloved</div></a>
+                        <a href="#" class="nav-button" style="float: right;"><div class="hover-underline-animation">Personal</div></a>
+                    </div>
+                </div>
+            <li><a href="index.html" class="nav-button" style="float: right"><div class="hover-underline-animation">Memories</div></a></li>
+            <li><a href="index.html" class="nav-button" style="float: right"><div class="hover-underline-animation">Projects</div></a></li>
+            <li><a href="index.html" class="nav-button" style="float: right"><div class="hover-underline-animation">Home</div></a></li>
+		</ul>
+	</div>
+    <br><br><br><br><br><br><br>
 
-<body>
-
-    <main>
-
-        <h1>Contact Us</h1>
-
-        <form id="contact-form"
-              action="https://formspree.io/f/xdekoyob"
-              method="POST">
-
+    
+    
+        <center>
+        <h1 style="margin-bottom: 5px;">Contact Me!</h1>
+        <h3 style="margin-bottom: 70px;">I am new to commissions but familiar with the concept<br>
+        I do Pixel art, Websites, and overall Graphic Designs.<br>
+        I do not do Traditional art forms</h3>
+        <br>
+        Below is a form that will send an email to me!
+        
+        <br><br>
+        <form id="contact-form" action="https://formspree.io/f/xdekoyob" method="POST">
             <!-- Name -->
-            <label for="name">Name</label>
-
+            <label for="name">Name:</label>
             <input
                 type="text"
                 id="name"
                 name="name"
                 placeholder="Your name"
-                required
-            >
-
-
+                required>
+            <br>
             <!-- Email -->
-            <label for="email">Email</label>
-
+            <label for="email">Email:</label>
             <input
                 type="email"
                 id="email"
                 name="email"
                 placeholder="your@email.com"
-                required
-            >
+                required>
+            <br>
 
 
             <!-- Subject -->
@@ -56,32 +73,50 @@
                 placeholder="Subject"
                 required
             >
-
+            <br>
 
             <!-- Message -->
-            <label for="message">Message</label>
+            <label for="message">Request</label>
 
             <textarea
                 id="message"
                 name="message"
-                placeholder="Write your message here..."
-                rows="8"
+                placeholder="Please give details for your commision here..."
+                rows="2"
                 required
             ></textarea>
-
+            <br>
 
             <!-- Submit -->
             <button type="submit" id="submit-button">
                 Send Message
             </button>
-
+            <br>
 
             <!-- Status message -->
             <p id="form-status"></p>
 
         </form>
+        </center>
 
-    </main>
+
+
+
+
+
+
+
+
+
+
+    <br><br><br><br>
+    <footer>
+		<div class="row">
+			<div class="col">
+				<p class="footer-text"><b>©2026 LostIGN. All rights reserved.</b></p>
+			</div>
+		</div>
+    </footer>
 
 
     <script>
@@ -150,7 +185,5 @@
         });
 
     </script>
-
 </body>
-
 </html>
