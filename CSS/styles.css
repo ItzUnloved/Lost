@@ -240,6 +240,33 @@ li.dropdown {
     margin-left: auto;
 }
 
+.contact-input {
+    background: transparent;
+    border: 3px solid #6F5AA5;
+    padding: 8px 10px;
+    margin: 5px;
+    font-size: 16px;
+    font-family: inherit;
+    outline: none;
+    box-sizing: border-box;
+    transition: 0.3s ease;
+}
+
+.contact-input:focus {
+    border-color: #5B4A87;
+}
+
+.contact-input::placeholder {
+    opacity: 0.6;
+}
+
+/* Request/message box */
+textarea.contact-input {
+    width: 400px;
+    height: 150px;
+    resize: none;
+    vertical-align: top;
+}
 
 
 h1 {

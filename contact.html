@@ -11,22 +11,22 @@
 </head>
 <body class="animate-opacity" >
 	<div class="style-nav">
-        <img src="Assets/Logo.png" class="style-logo"><a class="brand" style="float: left; font-weight: bolder;"><div class="hover-underline-animation">Lost IGN</div></a>
-		<ul>
-			<li><a href="https://www.twitch.tv/itzzunloved" target="_blank" class="nav-button" style="float: right"><div class="hover-underline-animation">Twitch</div></a></li>
-				<div class="dropdown">
-                    <div class="dropbtn">
-                        <li><a href="javascript:void(0)" class="nav-button" style="float: right"><div class="hover-underline-animation" >Instagrams!</div></a>
-                    </div>
-                    <div class="dropdown-content">
-					    <a href="#" class="nav-button" style="float: right;"><div class="hover-underline-animation">Photos</div></a>
-					    <a href="#" class="nav-button" style="float: right;"><div class="hover-underline-animation">ItzUnloved</div></a>
-                        <a href="#" class="nav-button" style="float: right;"><div class="hover-underline-animation">Personal</div></a>
-                    </div>
-                </div>
-            <li><a href="index.html" class="nav-button" style="float: right"><div class="hover-underline-animation">Memories</div></a></li>
-            <li><a href="index.html" class="nav-button" style="float: right"><div class="hover-underline-animation">Projects</div></a></li>
+          <img src="Assets/Logo.png" class="style-logo"><a class="brand" style="float: left; font-weight: bolder;"><div class="hover-underline-animation">Lost IGN</div></a>
+					<ul>
+            <li><a href="memories.html" class="nav-button" style="float: right"><div class="hover-underline-animation">Memories</div></a></li>
+            <li><a href="projects.html" class="nav-button" style="float: right"><div class="hover-underline-animation">Projects</div></a></li>
             <li><a href="index.html" class="nav-button" style="float: right"><div class="hover-underline-animation">Home</div></a></li>
+						<div class="dropdown">
+              <div class="dropbtn">
+                <li><a href="javascript:void(0)" class="nav-button" style="float: right"><div class="hover-underline-animation" >Instagrams!</div></a></li>
+              </div>
+                <div class="dropdown-content">
+						      <a href="https://www.instagram.com/emendezxdg/" target="_blank" class="nav-button" style="float: right;"><div class="hover-underline-animation">Photos</div></a>
+						      <a href="https://www.instagram.com/itzunloved/" target="_blank" class="nav-button" style="float: right;"><div class="hover-underline-animation">ItzUnloved</div></a>
+                  <a href="https://www.instagram.com/emendezxdg/" target="_blank" class="nav-button" style="float: right;"><div class="hover-underline-animation">Personal</div></a>
+                </div>
+            </div>
+            <li><a href="https://www.twitch.tv/itzzunloved" target="_blank" class="nav-button" style="float: right"><div class="hover-underline-animation">Twitch</div></a></li>
 		</ul>
 	</div>
     <br><br><br><br><br><br><br>
@@ -36,7 +36,7 @@
         <center>
         <h1 style="margin-bottom: 5px;">Contact Me!</h1>
         <h3 style="margin-bottom: 70px;">I am new to commissions but familiar with the concept<br>
-        I do Pixel art, Websites, and overall Graphic Designs.<br>
+        I do Pixel Art, Websites, and Simple Graphic Designs.<br>
         I do not do Traditional art forms</h3>
         <br>
         Below is a form that will send an email to me!
@@ -50,7 +50,9 @@
                 id="name"
                 name="name"
                 placeholder="Your name"
+                class="contact-input"
                 required>
+
             <br>
             <!-- Email -->
             <label for="email">Email:</label>
@@ -59,36 +61,43 @@
                 id="email"
                 name="email"
                 placeholder="your@email.com"
+                class="contact-input"
                 required>
             <br>
 
 
-            <!-- Subject -->
-            <label for="subject">Subject</label>
+            <!-- Commission Type -->
+            <label for="commission-type">Commission Type:</label>
 
-            <input
-                type="text"
-                id="subject"
-                name="subject"
-                placeholder="Subject"
-                required
-            >
+            <select
+            id="commission-type"
+            name="commission-type"
+            class="contact-input"
+            required>
+
+            <option value="" disabled selected>Select a commission type</option>
+            <option value="pixel-art">Pixel Art</option>
+            <option value="website">Website</option>
+            <option value="graphic-design">Graphic Design</option>
+
+            </select>
             <br>
 
             <!-- Message -->
-            <label for="message">Request</label>
-
+            <label for="message" style="vertical-align: top;">Request Below! I will get back to you afterwards!</label>
+            <br>
             <textarea
                 id="message"
                 name="message"
-                placeholder="Please give details for your commision here..."
+                placeholder="Please give details for your commission here..."
                 rows="2"
                 required
+                class="contact-input"
             ></textarea>
             <br>
 
             <!-- Submit -->
-            <button type="submit" id="submit-button">
+            <button type="submit" id="submit-button" class="nav-button">
                 Send Message
             </button>
             <br>
